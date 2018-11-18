@@ -8,7 +8,7 @@ current_LCD = ''
 button_keys = {'Clear' : [1,0], '%' :[1,1], '+/-' : [1,2], '*' : [1,3], '9' : [2,0]
 , '8' : [2,1], '7' : [2,2], '/' : [2,3], '6' : [3,0], '5' : [3,1], '4' : [3,2],
 '+' : [3,3], '3' : [4,0], '2' : [4,1], '1' : [4,2], '-' : [4,3], '.' : [5,0],
-'0' : [5,1], 'Ans' : [5,2], '=' : [5,3]} #row, column
+'0' : [5,1], 'Ans' : [5,2], '=' : [5,3]} #Dictionary with all the keys and their location(row,column)
 
 def LCD_display(key):
     global current_LCD
