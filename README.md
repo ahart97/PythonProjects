@@ -1,3 +1,5 @@
 # PythonProjects
 
-Repository for all of my Python creations
+Collections of all of my Python 2/3 creations:
+
+Calculator: Simple calculator made using Tkinter and python 2
