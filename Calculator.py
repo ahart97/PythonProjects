@@ -2,7 +2,7 @@ from Tkinter import *
 
 root = Tk()
 root.title("Calculator")
-global current_LCD
+Clear = True
 current_LCD = ''
 
 button_keys = {'Clear' : [1,0], '%' :[1,1], '+/-' : [1,2], '*' : [1,3], '9' : [2,0]
@@ -13,23 +13,25 @@ button_keys = {'Clear' : [1,0], '%' :[1,1], '+/-' : [1,2], '*' : [1,3], '9' : [2
 def LCD_display(key):
     global current_LCD
     global old_LCD
-    global display_LCD
+    global Clear
     if key == '=':
         old_LCD = str(eval(current_LCD))
-        current_LCD = str(eval(current_LCD))
+        current_LCD = str(eval(current_LCD)) + '='
+        Clear = False
     elif key == 'Clear':
         current_LCD = ''
-    elif key == '+/-':
+        Clear = True
+    elif key == '+/-' and Clear:
         current_LCD = current_LCD + '*(-1)'
-    elif key == 'Ans':
+    elif key == 'Ans' and Clear:
         current_LCD = current_LCD + old_LCD
-    elif key == '%':
+    elif key == '%' and Clear:
         current_LCD = current_LCD + '/100.0'
-    else:
+    elif Clear:
         current_LCD = current_LCD + key
 
 
-    calc_text = Label(root, text = current_LCD + '=', height = 5, width = 30, relief = SOLID,
+    calc_text = Label(root, text = current_LCD , height = 5, width = 30, relief = SOLID,
     bd = 10).grid(row = 0, columnspan = 4)
 
 
