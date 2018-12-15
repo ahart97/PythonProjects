@@ -8,7 +8,7 @@ Calculator: Simple calculator application:
 
 WN: Application for the current 3-day weather:  
       - Made using python3  
-      - Uses Tkinter, BeautifulSoup, and Requests packages
-      - WN_v1: Can display the weather for Toronto or Waterloo
+      - Uses Tkinter, BeautifulSoup, and Requests packages  
+      - WN_v1: Can display the weather for Toronto or Waterloo  
       - WN_v2:Adding ability to find weather for any city after user inputs city
-        name and url 
+        name and url   
