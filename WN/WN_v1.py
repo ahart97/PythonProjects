@@ -3,6 +3,7 @@ import requests
 from tkinter import *
 
 root = Tk()
+root.title('Weather')
 
 def get_future_forcast(url):
 
