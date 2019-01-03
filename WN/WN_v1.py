@@ -5,6 +5,16 @@ from tkinter import *
 root = Tk()
 root.title('Weather')
 
+def get_date(url):
+
+    '''Gets the date when the script is ran'''
+
+    page = requests.get(url)
+    soup = BeautifulSoup(page.content, 'html.parser')
+    date = soup.find(id='ij2')
+    date = date.get_text()
+    return date
+
 def get_future_forcast(url):
 
     '''Locatate where the forcasts are being held'''
@@ -65,7 +75,9 @@ UW_info = lists_to_string('Waterloo')
 
 cities = {'Toronto': TO_info, 'Waterloo' : UW_info}
 
-var = StringVar()
+date = 'Today: ' + get_date('https://www.timeanddate.com')
+
+temperature = StringVar()
 
 class Display:
     def __init__(self,master):
@@ -77,7 +89,7 @@ class Display:
 
         '''Creates a label to display temp'''
 
-        self.temp = Label(frame, textvariable = var)
+        self.temp = Label(frame, textvariable = temperature)
         self.temp.pack()
 
 class Selection:
@@ -91,9 +103,12 @@ class Selection:
         '''Creating all the Radiobutton selections'''
 
         for place, temp in cities.items():
-            self.select = Radiobutton(frame, text = place, variable = var, value = temp,
+            self.select = Radiobutton(frame, text = place, variable = temperature, value = temp,
             indicatoron = 0, width = 25)
             self.select.pack()
+
+        self.date = Label(frame, text = date, pady = 10, padx = 10)
+        self.date.pack(side = BOTTOM)
 
 Info = Selection(root)
 Weather = Display(root)
