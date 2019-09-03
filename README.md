@@ -5,7 +5,7 @@ Collection of all of my Python 2/3 creations:
 Calculator: Simple calculator application:  
 
       - Made using python2  
-      - Uses Tkinter packages
+      - Uses Tkinter packages   
 
 WN: Application for the current 3-day weather:  
 
@@ -14,3 +14,8 @@ WN: Application for the current 3-day weather:
       - WN_v1: Can display the weather for Toronto or Waterloo  
       - WN_v2: Adding ability to find weather for any city after user inputs city
         name and url (DRAFT)  
+
+PetCam: Script to stream video with Raspberry Pi
+
+      - Made using python3
+      - Uses Raspberry Pi and Raspberry Pi Camera
