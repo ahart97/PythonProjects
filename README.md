@@ -18,4 +18,4 @@ WN: Application for the current 3-day weather:
 PetCam: Script to stream video with Raspberry Pi
 
       - Made using python3
-      - Uses Raspberry Pi and Raspberry Pi Camera
+      - Uses Raspberry Pi, Raspberry Pi Camera and a VNC
