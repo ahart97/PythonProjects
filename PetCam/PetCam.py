@@ -11,7 +11,6 @@ camera.resolution = (1640,922)
 camera.framerate = 30
 
 camera.start_preview()
-camera.preview.fullscreen = False
 camera.preview.window = (10,10,500,500)
 camera.annotate_text = "Bailey Cam"
 
@@ -33,4 +32,3 @@ while action != 'stop':
         camera.stop_recording()
 
 camera.stop_preview()
-
