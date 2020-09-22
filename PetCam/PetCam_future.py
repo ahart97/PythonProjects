@@ -18,4 +18,3 @@ action = input()
 
 
 camera.stop_preview()
-
